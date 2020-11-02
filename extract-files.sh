@@ -13,7 +13,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 LINEAGE_ROOT="${MY_DIR}"/../../..
 
-HELPER="${LINEAGE_ROOT}/vendor/aosp/build/tools/extract_utils.sh"
+HELPER="${LINEAGE_ROOT}/vendor/ancient/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -22,7 +22,6 @@ source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
-
 ONLY_COMMON=
 ONLY_TARGET=
 SECTION=
@@ -56,6 +55,11 @@ done
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
+
+function blob_fixup() {
+    case "${1}" in
+    esac
+}
 
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
