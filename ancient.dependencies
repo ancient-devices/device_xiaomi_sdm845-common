@@ -4,5 +4,10 @@
     "repository": "gmw-project/android_kernel_xiaomi_sdm845",
     "target_path": "kernel/xiaomi/sdm845",
     "branch": "ten-oldtouch"
+  },
+  {
+    "repository": "vendor_xiaomi_beryllium",
+    "target_path": "vendor/xiaomi",
+    "branch": "eleven"
   }
 ]
